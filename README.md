@@ -152,13 +152,13 @@ SELECT * FROM users;
 ```
 
 
-<>br
+<br>
 <br>
 
 ### What Did We Learn?
 1. How to Dockerize Applications:
 
-  -We created a Docker image for a Python script and linked it with a database.
+  - We created a Docker image for a Python script and linked it with a database.
 
 2. Networking in Docker:
 
@@ -170,9 +170,8 @@ SELECT * FROM users;
   - The Python application successfully created and interacted with a MySQL database     running in a separate container.
 
 4. Hands-On with Docker Commands:
-
   - We used commands to create networks, run containers, and verify their   
-    interactions.
+   interactions.
     
 By the end, you have a Python application running in a container that communicates with a MySQL database container seamlessly.
 

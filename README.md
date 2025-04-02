@@ -15,7 +15,7 @@
 
 ## Follow below steps to Implement.
 
-### step 1. Create test.py
+### Step 1. Create test.py
 *This Python script:*
 
 - Connects to the MySQL container using the mysql-connector-python library.
@@ -71,7 +71,7 @@ finally:
 
 
 
-### step 2. Create a Dockerfile
+### Step 2. Create a Dockerfile
 *This file packages test.py into a Docker image.*
 
   - It uses a lightweight Python base image.
@@ -101,7 +101,7 @@ CMD ["python", "test.py"]
 docker network create app2
 ```
 
-### step 4. Run the MySQL Container
+### Step 4. Run the MySQL Container
   *Start a MySQL container with:*
 
   - A root password (rootpassword).
@@ -112,21 +112,21 @@ docker run -d --name mysql-container --network app2 -e MYSQL_ROOT_PASSWORD=rootp
 
 ```
 
-### step 5. Build the Docker Image for test.py
+### Step 5. Build the Docker Image for test.py
    *Build the image for your Python application.*
 
 ```yml
 docker build -t test-python-app .
 ```
 
-### step 6. Run the Python Container
+### Step 6. Run the Python Container
    *Run the container for test.py, connecting it to the app2 network so it can access the MySQL container.*
 
 ```yml
 docker run -d --name test-python-container --network app2 test-python-app
 ```
 
-### step 7. Verify the Setup
+### Step 7. Verify the Setup
   *Access the MySQL container to confirm the database and table were created.*
 
 1: Access the MySQL container:
